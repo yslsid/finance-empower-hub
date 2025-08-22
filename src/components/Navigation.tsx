@@ -24,6 +24,12 @@ const Navigation = () => {
             About
           </button>
           <button 
+            onClick={() => window.location.href = '/globe'}
+            className="text-muted-foreground hover:text-primary transition-glow font-medium"
+          >
+            Globe
+          </button>
+          <button 
             onClick={() => scrollToSection('workshops')}
             className="text-muted-foreground hover:text-primary transition-glow font-medium"
           >

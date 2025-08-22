@@ -6,13 +6,13 @@ const Contact = () => {
     {
       icon: "📧",
       title: "Email Us",
-      detail: "hello@focusfinance.org",
+      detail: "focusfinance73@gmail.com",
       description: "General inquiries and workshop requests"
     },
     {
       icon: "📱",
       title: "Follow Us",
-      detail: "@FocusFinance",
+      detail: "@focusfinance.global",
       description: "Updates, tips, and success stories"
     },
     {
@@ -124,7 +124,7 @@ const Contact = () => {
                   Questions? Email us at
                 </div>
                 <div className="text-primary font-semibold">
-                  hello@focusfinance.org
+                  focusfinance73@gmail.com
                 </div>
               </div>
             </div>
