@@ -96,6 +96,12 @@ const GetInvolved = () => {
                   variant={pathway.ctaVariant}
                   className="w-full"
                   size="lg"
+                  onClick={() => {
+                    const url = index === 0 
+                      ? "https://docs.google.com/forms/d/e/1FAIpQLSclrrXLoOAsZTHioA6y2JEYbafOnKNzJVH6Ee7ywFXxCecjEw/viewform?usp=header"
+                      : "https://docs.google.com/forms/d/e/1FAIpQLSc99YQv9E9U6_kQz0f6CDe4oJsnkC4eojOhpFVL7H39q3GWzw/viewform?usp=header";
+                    window.open(url, '_blank');
+                  }}
                 >
                   {pathway.cta}
                 </Button>
@@ -119,6 +125,7 @@ const GetInvolved = () => {
                 variant="secondary" 
                 size="lg"
                 className="bg-white text-primary hover:bg-white/90 px-8 py-6 text-lg"
+                onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSclrrXLoOAsZTHioA6y2JEYbafOnKNzJVH6Ee7ywFXxCecjEw/viewform?usp=header", '_blank')}
               >
                 Schedule a Workshop
               </Button>

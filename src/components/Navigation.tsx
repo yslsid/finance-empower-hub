@@ -18,16 +18,10 @@ const Navigation = () => {
         
         <div className="hidden md:flex items-center space-x-8">
           <button 
-            onClick={() => scrollToSection('about')}
+            onClick={() => window.location.href = '/about'}
             className="text-muted-foreground hover:text-primary transition-glow font-medium"
           >
             About
-          </button>
-          <button 
-            onClick={() => window.location.href = '/team'}
-            className="text-muted-foreground hover:text-primary transition-glow font-medium"
-          >
-            Team
           </button>
           <button 
             onClick={() => scrollToSection('workshops')}
