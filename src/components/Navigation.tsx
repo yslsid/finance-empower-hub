@@ -11,9 +11,9 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center shadow-glow">
-            <span className="text-primary-foreground font-bold text-sm">FL</span>
+            <span className="text-primary-foreground font-bold text-sm">FF</span>
           </div>
-          <span className="text-xl font-semibold text-foreground tracking-tight">FinLit Workshops</span>
+          <span className="text-xl font-semibold text-foreground tracking-tight">FocusFinance</span>
         </div>
         
         <div className="hidden md:flex items-center space-x-8">
@@ -22,6 +22,12 @@ const Navigation = () => {
             className="text-muted-foreground hover:text-primary transition-glow font-medium"
           >
             About
+          </button>
+          <button 
+            onClick={() => window.location.href = '/team'}
+            className="text-muted-foreground hover:text-primary transition-glow font-medium"
+          >
+            Team
           </button>
           <button 
             onClick={() => scrollToSection('workshops')}

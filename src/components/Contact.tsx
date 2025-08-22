@@ -6,13 +6,13 @@ const Contact = () => {
     {
       icon: "📧",
       title: "Email Us",
-      detail: "hello@finlitworkshops.org",
+      detail: "hello@focusfinance.org",
       description: "General inquiries and workshop requests"
     },
     {
       icon: "📱",
       title: "Follow Us",
-      detail: "@FinLitWorkshops",
+      detail: "@FocusFinance",
       description: "Updates, tips, and success stories"
     },
     {
@@ -124,7 +124,7 @@ const Contact = () => {
                   Questions? Email us at
                 </div>
                 <div className="text-primary font-semibold">
-                  hello@finlitworkshops.org
+                  hello@focusfinance.org
                 </div>
               </div>
             </div>
@@ -133,7 +133,7 @@ const Contact = () => {
         
         <div className="text-center mt-12">
           <p className="text-muted-foreground">
-            © 2024 FinLit Workshops. Empowering students through financial education.
+            © 2024 FocusFinance. Empowering students through financial education.
           </p>
         </div>
       </div>
