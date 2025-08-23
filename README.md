@@ -1,73 +1,105 @@
-# Welcome to your Lovable project
+# FocusFinance - Next.js Static Site
 
-## Project info
+A production-ready static website for FocusFinance built with Next.js, React, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/45630cc8-fe4b-4590-b2b3-0682a78b15c6
+## Project Structure
 
-## How can I edit this code?
+```
+├── pages/
+│   ├── _app.js          # App wrapper
+│   ├── index.js         # Home page (/)
+│   ├── about.js         # About page (/about)
+│   └── branches.js      # Interactive Globe (/branches)
+├── components/
+│   ├── Layout.js        # Navigation wrapper
+│   └── GlobeComponent.js # 3D Interactive Globe
+├── styles/
+│   └── globals.css      # Global styles and design system
+├── public/
+│   └── _redirects       # Netlify routing configuration
+└── package.json
+```
 
-There are several ways of editing your application.
+## Development
 
-**Use Lovable**
+### Local Development
+```bash
+# Install dependencies
+npm install
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/45630cc8-fe4b-4590-b2b3-0682a78b15c6) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Visit `http://localhost:3000` to see the site.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Building for Production
+```bash
+# Build and export static files
+npm run build-export
 
-**Use GitHub Codespaces**
+# Or run separately:
+npm run build
+npm run export
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The static files will be generated in the `/out` directory.
 
-## What technologies are used for this project?
+## Deployment on Netlify
 
-This project is built with:
+### Method 1: Git Integration (Recommended)
+1. Push your code to a Git repository (GitHub, GitLab, etc.)
+2. Connect your repository to Netlify
+3. Set build command: `npm run build-export`
+4. Set publish directory: `out`
+5. Deploy!
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Method 2: Drag & Drop
+1. Run `npm run build-export` locally
+2. Drag and drop the `/out` folder to Netlify's deploy area
+3. Confirm that `_redirects` file exists in the deployed site root
 
-## How can I deploy this project?
+### Testing Deployment
+- Verify all routes work: `/`, `/about`, `/branches`
+- Test page refresh (should not show 404 errors)
+- Check that the interactive globe loads on `/branches`
+- Ensure navigation between pages works correctly
 
-Simply open [Lovable](https://lovable.dev/projects/45630cc8-fe4b-4590-b2b3-0682a78b15c6) and click on Share -> Publish.
+## Globe Customization
 
-## Can I connect a custom domain to my Lovable project?
+The interactive globe is located in `components/GlobeComponent.js`. To customize:
 
-Yes, you can!
+- **Colors**: Modify the `meshStandardMaterial` color prop
+- **Camera**: Adjust the `camera` prop in the Canvas component
+- **Rotation**: Change `autoRotateSpeed` in OrbitControls
+- **Zoom limits**: Modify `minDistance` and `maxDistance`
+- **Sizing**: The globe automatically fills the viewport (100vw x 100vh)
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Design System
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+The design system uses CSS custom properties defined in `styles/globals.css`:
+- Colors are defined as HSL values
+- Gradients and shadows use semantic tokens
+- All components use the centralized design system
+
+## Features
+
+- ✅ Static site generation with Next.js
+- ✅ Responsive design with Tailwind CSS
+- ✅ Interactive 3D globe with Three.js
+- ✅ Team member photo drag-and-drop
+- ✅ Contact forms linked to Google Forms
+- ✅ Netlify-ready deployment configuration
+- ✅ SEO-friendly routing and meta tags
+
+## Browser Support
+
+- Modern browsers with ES6+ support
+- WebGL support required for 3D globe functionality
+
+## Performance
+
+- Static files for optimal loading speed
+- Code splitting with dynamic imports
+- Optimized CSS with Tailwind purge
+- Three.js loaded only on globe page
