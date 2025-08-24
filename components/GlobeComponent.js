@@ -7,11 +7,14 @@ const EarthGlobe = () => {
   const meshRef = useRef(null);
 
   return (
-    <Sphere ref={meshRef} args={[2, 32, 32]}>
-      <meshStandardMaterial
-        color="#2563eb"
-        roughness={0.3}
-        metalness={0.1}
+    <Sphere ref={meshRef} args={[2, 64, 64]}>
+      <meshPhongMaterial
+        color="#00ffff"
+        transparent={true}
+        opacity={0.8}
+        shininess={100}
+        emissive="#008080"
+        emissiveIntensity={0.3}
         wireframe={false}
       />
     </Sphere>
@@ -46,8 +49,9 @@ const GlobeComponent = () => {
         className="w-full h-full"
         style={{ width: '100%', height: '100vh' }}
       >
-        <ambientLight intensity={0.5} />
-        <pointLight position={[10, 10, 10]} />
+        <ambientLight intensity={0.3} />
+        <pointLight position={[10, 10, 10]} color="#00ffff" intensity={2} />
+        <pointLight position={[-10, -10, 10]} color="#008080" intensity={1} />
         <EarthGlobe />
         <OrbitControls
           enablePan={true}
@@ -56,7 +60,7 @@ const GlobeComponent = () => {
           minDistance={3}
           maxDistance={10}
           autoRotate={true}
-          autoRotateSpeed={1}
+          autoRotateSpeed={2}
         />
       </Canvas>
       

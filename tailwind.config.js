@@ -67,7 +67,9 @@ module.exports = {
         'strong': 'var(--shadow-strong)',
         'glow': 'var(--shadow-glow)',
         'neon': 'var(--shadow-neon)',
-        'frost': 'var(--shadow-frost)'
+        'frost': 'var(--shadow-frost)',
+        'futuristic': '0 4px 20px rgba(6, 182, 212, 0.3)',
+        'futuristic-glow': '0 8px 30px rgba(6, 182, 212, 0.5), 0 0 20px rgba(34, 211, 238, 0.3)',
       },
       transitionTimingFunction: {
         'smooth': 'var(--transition-smooth)',
