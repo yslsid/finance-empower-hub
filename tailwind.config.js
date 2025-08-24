@@ -58,19 +58,22 @@ module.exports = {
         'gradient-hero': 'var(--gradient-hero)',
         'gradient-subtle': 'var(--gradient-subtle)',
         'gradient-dark': 'var(--gradient-dark)',
-        'gradient-glow': 'var(--gradient-glow)'
+        'gradient-glow': 'var(--gradient-glow)',
+        'gradient-frost': 'var(--gradient-frost)'
       },
       boxShadow: {
         'soft': 'var(--shadow-soft)',
         'medium': 'var(--shadow-medium)',
         'strong': 'var(--shadow-strong)',
         'glow': 'var(--shadow-glow)',
-        'neon': 'var(--shadow-neon)'
+        'neon': 'var(--shadow-neon)',
+        'frost': 'var(--shadow-frost)'
       },
       transitionTimingFunction: {
         'smooth': 'var(--transition-smooth)',
         'spring': 'var(--transition-spring)',
-        'glow': 'var(--transition-glow)'
+        'glow': 'var(--transition-glow)',
+        'frost': 'var(--transition-frost)'
       },
       borderRadius: {
         lg: 'var(--radius)',

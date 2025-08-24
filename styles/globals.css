@@ -8,56 +8,60 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 27% 8%;
-    --foreground: 210 40% 98%;
+    /* Cold/Frosty Theme - Dark steel gray backgrounds with icy blue accents */
+    --background: 210 20% 8%;
+    --foreground: 210 10% 98%;
 
-    --card: 220 27% 12%;
-    --card-foreground: 210 40% 98%;
+    --card: 210 25% 12%;
+    --card-foreground: 210 10% 98%;
 
-    --popover: 220 27% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 210 25% 12%;
+    --popover-foreground: 210 10% 98%;
 
-    --primary: 200 100% 60%;
-    --primary-foreground: 220 27% 8%;
+    --primary: 200 100% 65%;
+    --primary-foreground: 210 20% 8%;
 
-    --secondary: 180 100% 45%;
-    --secondary-foreground: 220 27% 8%;
+    --secondary: 195 85% 55%;
+    --secondary-foreground: 210 20% 8%;
 
-    --muted: 220 27% 16%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 210 25% 16%;
+    --muted-foreground: 210 15% 70%;
 
-    --accent: 270 100% 70%;
-    --accent-foreground: 220 27% 8%;
+    --accent: 185 90% 60%;
+    --accent-foreground: 210 20% 8%;
 
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 210 10% 98%;
 
-    --border: 220 27% 20%;
-    --input: 220 27% 16%;
-    --ring: 200 100% 60%;
+    --border: 210 25% 22%;
+    --input: 210 25% 16%;
+    --ring: 200 100% 65%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
   }
 
-  /* Custom gradients and design tokens */
+  /* Cold/Frosty gradients and design tokens */
   :root {
-    --gradient-primary: linear-gradient(135deg, hsl(200 100% 60%) 0%, hsl(220 100% 70%) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(180 100% 45%) 0%, hsl(200 100% 50%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(270 100% 70%) 0%, hsl(290 100% 75%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(220 27% 8%) 0%, hsl(200 100% 60%) 50%, hsl(270 100% 70%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(220 27% 8%) 0%, hsl(220 27% 12%) 100%);
-    --gradient-dark: linear-gradient(135deg, hsl(220 27% 4%) 0%, hsl(220 27% 12%) 100%);
-    --gradient-glow: radial-gradient(circle at center, hsl(200 100% 60% / 0.3) 0%, transparent 70%);
+    --gradient-primary: linear-gradient(135deg, hsl(200 100% 65%) 0%, hsl(220 100% 55%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(195 85% 55%) 0%, hsl(185 90% 60%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(185 90% 60%) 0%, hsl(175 95% 65%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(210 20% 8%) 0%, hsl(200 100% 65%) 50%, hsl(185 90% 60%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(210 20% 8%) 0%, hsl(210 25% 12%) 100%);
+    --gradient-dark: linear-gradient(135deg, hsl(210 20% 4%) 0%, hsl(210 25% 12%) 100%);
+    --gradient-glow: radial-gradient(circle at center, hsl(200 100% 65% / 0.2) 0%, transparent 70%);
+    --gradient-frost: linear-gradient(135deg, hsl(210 25% 12% / 0.8) 0%, hsl(200 100% 65% / 0.1) 100%);
     
-    --shadow-soft: 0 4px 20px -2px hsl(200 100% 60% / 0.1);
-    --shadow-medium: 0 8px 30px -4px hsl(200 100% 60% / 0.15);
-    --shadow-strong: 0 20px 40px -8px hsl(200 100% 60% / 0.2);
-    --shadow-glow: 0 0 50px hsl(200 100% 60% / 0.4);
-    --shadow-neon: 0 0 20px hsl(200 100% 60% / 0.6), 0 0 40px hsl(200 100% 60% / 0.4);
+    --shadow-soft: 0 4px 20px -2px hsl(200 100% 65% / 0.08);
+    --shadow-medium: 0 8px 30px -4px hsl(200 100% 65% / 0.12);
+    --shadow-strong: 0 20px 40px -8px hsl(200 100% 65% / 0.16);
+    --shadow-glow: 0 0 40px hsl(200 100% 65% / 0.3);
+    --shadow-neon: 0 0 20px hsl(200 100% 65% / 0.5), 0 0 40px hsl(185 90% 60% / 0.3);
+    --shadow-frost: 0 8px 32px -8px hsl(200 100% 65% / 0.2), 0 0 0 1px hsl(200 100% 65% / 0.05);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
     --transition-glow: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-frost: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -102,52 +106,52 @@ All colors MUST be HSL.
   position: relative;
 }
 
-/* Button styles */
+/* Cold/Frosty Button styles - fully rounded */
 .btn {
-  @apply inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+  @apply inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium ring-offset-background transition-frost focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
 }
 
 .btn-primary {
-  @apply bg-primary text-primary-foreground hover:bg-primary/90;
+  @apply bg-primary text-primary-foreground hover:bg-primary/90 shadow-soft hover:shadow-medium transform hover:scale-105 transition-frost;
 }
 
 .btn-secondary {
-  @apply bg-secondary text-secondary-foreground hover:bg-secondary/80;
+  @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-soft hover:shadow-medium transform hover:scale-105 transition-frost;
 }
 
 .btn-hero {
-  @apply bg-gradient-primary text-primary-foreground hover:shadow-glow transform hover:scale-105 transition-all duration-300;
+  @apply bg-gradient-primary text-primary-foreground hover:shadow-glow transform hover:scale-105 transition-glow shadow-medium;
 }
 
 .btn-glass {
-  @apply bg-white/10 text-white border border-white/20 hover:bg-white/20 backdrop-blur-sm;
+  @apply bg-card/10 backdrop-blur-md border border-primary/20 text-foreground hover:bg-card/20 hover:shadow-frost transition-frost;
 }
 
 .btn-success {
-  @apply bg-gradient-secondary text-secondary-foreground hover:shadow-glow transform hover:scale-105 transition-all duration-300;
+  @apply bg-gradient-secondary text-secondary-foreground hover:shadow-glow transform hover:scale-105 transition-glow shadow-medium;
 }
 
 .btn-accent {
-  @apply bg-gradient-accent text-accent-foreground hover:shadow-glow transform hover:scale-105 transition-all duration-300;
+  @apply bg-gradient-accent text-accent-foreground hover:shadow-neon transform hover:scale-105 transition-glow shadow-medium;
 }
 
 .btn-outline {
-  @apply border border-input bg-background hover:bg-accent hover:text-accent-foreground;
+  @apply border border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground transform hover:scale-105 transition-frost;
 }
 
 .btn-ghost {
-  @apply hover:bg-accent hover:text-accent-foreground;
+  @apply hover:bg-accent hover:text-accent-foreground transform hover:scale-105 transition-frost;
 }
 
 .btn-sm {
-  @apply h-9 rounded-md px-3;
+  @apply h-9 rounded-full px-4;
 }
 
 .btn-lg {
-  @apply h-11 rounded-md px-8;
+  @apply h-12 rounded-full px-8;
 }
 
-/* Card styles */
+/* Cold/Frosty Card styles */
 .card {
-  @apply rounded-lg border bg-card text-card-foreground shadow-sm;
+  @apply rounded-2xl border bg-card text-card-foreground shadow-frost hover:shadow-strong transition-frost transform hover:-translate-y-1;
 }

@@ -48,9 +48,9 @@ const AboutPage = () => {
             >
               <Link href="/">
                 <motion.button 
-                  whileHover={{ scale: 1.05, x: -5 }}
+                  whileHover={{ scale: 1.08, x: -5 }}
                   whileTap={{ scale: 0.95 }}
-                  className="btn btn-ghost mb-8 text-muted-foreground hover:text-primary rounded-xl transition-all duration-200"
+                  className="btn btn-ghost mb-8 text-muted-foreground hover:text-primary transition-frost"
                 >
                   ← Back to Home
                 </motion.button>
@@ -86,8 +86,8 @@ const AboutPage = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-                  whileHover={{ y: -8, transition: { duration: 0.2 } }}
-                  className="card shadow-medium hover:shadow-strong transition-all duration-300 rounded-2xl bg-card/50 backdrop-blur-sm border border-primary/10"
+                  whileHover={{ y: -10, transition: { duration: 0.2 } }}
+                  className="card shadow-frost hover:shadow-strong transition-frost bg-card/50 backdrop-blur-sm border border-primary/10"
                 >
                   <div className="pt-8 pb-8 px-6 text-center">
                     <motion.div 
@@ -96,7 +96,7 @@ const AboutPage = () => {
                       onDrop={(e) => handleImageDrop(e, member.name)}
                       onDragOver={handleDragOver}
                     >
-                      <div className="w-24 h-24 mx-auto border-4 border-primary/20 shadow-glow rounded-full overflow-hidden bg-gradient-primary flex items-center justify-center transition-all duration-300 hover:border-primary/40 hover:shadow-neon">
+                      <div className="w-24 h-24 mx-auto border-4 border-primary/20 shadow-frost rounded-full overflow-hidden bg-gradient-primary flex items-center justify-center transition-frost hover:border-primary/40 hover:shadow-glow hover:scale-110">
                         <img
                           src="" 
                           alt={member.name}
@@ -107,8 +107,8 @@ const AboutPage = () => {
                           {member.initials}
                         </span>
                       </div>
-                      <div className="absolute inset-0 bg-black/60 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
-                        <span className="text-white text-xs font-medium px-2 py-1 bg-black/80 rounded-lg">
+                      <div className="absolute inset-0 bg-background/80 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-frost flex items-center justify-center">
+                        <span className="text-foreground text-xs font-medium px-3 py-2 bg-card/90 backdrop-blur-sm rounded-full border border-primary/20">
                           Drop photo here
                         </span>
                       </div>
@@ -129,8 +129,8 @@ const AboutPage = () => {
               className="text-center mt-16"
             >
               <motion.div 
-                whileHover={{ y: -5 }}
-                className="bg-card/50 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-medium hover:shadow-strong transition-all duration-300 max-w-2xl mx-auto border border-primary/10"
+                whileHover={{ y: -8 }}
+                className="bg-gradient-frost backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-frost hover:shadow-strong transition-frost max-w-2xl mx-auto border border-primary/20"
               >
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
                   Join Our Mission
@@ -139,9 +139,9 @@ const AboutPage = () => {
                   Interested in contributing to financial education? We're always looking for passionate individuals to join our team.
                 </p>
                 <motion.button 
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.08 }}
                   whileTap={{ scale: 0.95 }}
-                  className="btn btn-hero btn-lg rounded-xl shadow-md hover:shadow-lg transition-all duration-200"
+                  className="btn btn-hero btn-lg shadow-frost hover:shadow-glow transition-frost"
                 >
                   Get In Touch
                 </motion.button>
