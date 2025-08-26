@@ -8,60 +8,75 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Cold/Frosty Theme - Dark steel gray backgrounds with icy blue accents */
-    --background: 210 20% 8%;
-    --foreground: 210 10% 98%;
+    /* Futuristic Cyberpunk Theme - Deep space backgrounds with neon accents */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
 
-    --card: 210 25% 12%;
-    --card-foreground: 210 10% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 210 25% 12%;
-    --popover-foreground: 210 10% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 200 100% 65%;
-    --primary-foreground: 210 20% 8%;
+    --primary: 263 70% 50.4%;
+    --primary-foreground: 210 20% 98%;
 
-    --secondary: 195 85% 55%;
-    --secondary-foreground: 210 20% 8%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
 
-    --muted: 210 25% 16%;
-    --muted-foreground: 210 15% 70%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
 
-    --accent: 185 90% 60%;
-    --accent-foreground: 210 20% 8%;
+    --accent: 192 100% 50%;
+    --accent-foreground: 240 10% 3.9%;
 
-    --destructive: 0 70% 55%;
-    --destructive-foreground: 210 10% 98%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 210 25% 22%;
-    --input: 210 25% 16%;
-    --ring: 200 100% 65%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 263 70% 50.4%;
 
-    --radius: 1rem;
+    --radius: 0.75rem;
+
+    /* Cyberpunk Neon Colors */
+    --neon-blue: 192 100% 50%;
+    --neon-cyan: 180 100% 50%;
+    --neon-magenta: 300 100% 50%;
+    --neon-violet: 263 70% 50.4%;
+    --neon-pink: 320 100% 50%;
+    --electric-blue: 217 91% 60%;
+    
+    /* Glass morphism */
+    --glass: 240 10% 3.9% / 0.7;
+    --glass-border: 0 0% 100% / 0.1;
+    --glass-hover: 240 10% 3.9% / 0.9;
   }
 
-  /* Cold/Frosty gradients and design tokens */
+  /* Futuristic Cyberpunk gradients and design tokens */
   :root {
-    --gradient-primary: linear-gradient(135deg, hsl(200 100% 65%) 0%, hsl(220 100% 55%) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(195 85% 55%) 0%, hsl(185 90% 60%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(185 90% 60%) 0%, hsl(175 95% 65%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(210 20% 8%) 0%, hsl(200 100% 65%) 50%, hsl(185 90% 60%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(210 20% 8%) 0%, hsl(210 25% 12%) 100%);
-    --gradient-dark: linear-gradient(135deg, hsl(210 20% 4%) 0%, hsl(210 25% 12%) 100%);
-    --gradient-glow: radial-gradient(circle at center, hsl(200 100% 65% / 0.2) 0%, transparent 70%);
-    --gradient-frost: linear-gradient(135deg, hsl(210 25% 12% / 0.8) 0%, hsl(200 100% 65% / 0.1) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--neon-violet)) 0%, hsl(var(--neon-blue)) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--neon-cyan)) 0%, hsl(var(--electric-blue)) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--neon-magenta)) 0%, hsl(var(--neon-pink)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(240 10% 3.9%) 0%, hsl(var(--neon-violet)) 25%, hsl(var(--neon-blue)) 50%, hsl(var(--neon-cyan)) 75%, hsl(240 10% 3.9%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(var(--glass)) 0%, hsl(240 10% 8% / 0.4) 100%);
+    --gradient-neon: linear-gradient(45deg, hsl(var(--neon-blue)) 0%, hsl(var(--neon-cyan)) 25%, hsl(var(--neon-magenta)) 50%, hsl(var(--neon-violet)) 75%, hsl(var(--neon-blue)) 100%);
+    --gradient-hologram: conic-gradient(from 0deg, hsl(var(--neon-blue)) 0%, hsl(var(--neon-cyan)) 25%, hsl(var(--neon-magenta)) 50%, hsl(var(--neon-violet)) 75%, hsl(var(--neon-blue)) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(240 10% 3.9%) 0%, hsl(240 15% 8%) 100%);
     
-    --shadow-soft: 0 4px 20px -2px hsl(200 100% 65% / 0.08);
-    --shadow-medium: 0 8px 30px -4px hsl(200 100% 65% / 0.12);
-    --shadow-strong: 0 20px 40px -8px hsl(200 100% 65% / 0.16);
-    --shadow-glow: 0 0 40px hsl(200 100% 65% / 0.3);
-    --shadow-neon: 0 0 20px hsl(200 100% 65% / 0.5), 0 0 40px hsl(185 90% 60% / 0.3);
-    --shadow-frost: 0 8px 32px -8px hsl(200 100% 65% / 0.2), 0 0 0 1px hsl(200 100% 65% / 0.05);
+    --shadow-neon-glow: 0 0 30px hsl(var(--neon-blue) / 0.5), 0 0 60px hsl(var(--neon-cyan) / 0.3), 0 0 90px hsl(var(--neon-violet) / 0.2);
+    --shadow-glass: 0 8px 32px hsl(0 0% 0% / 0.12), 0 0 0 1px hsl(var(--glass-border));
+    --shadow-hover-glow: 0 0 40px hsl(var(--neon-blue) / 0.6), 0 0 80px hsl(var(--neon-cyan) / 0.4), 0 8px 32px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.15), 0 0 0 1px hsl(var(--glass-border));
+    --shadow-card-hover: 0 8px 40px hsl(var(--neon-blue) / 0.3), 0 0 0 1px hsl(var(--neon-blue) / 0.2);
+    --shadow-button: 0 4px 16px hsl(var(--neon-blue) / 0.4), 0 0 0 1px hsl(var(--neon-blue) / 0.3);
+    --shadow-button-hover: 0 6px 24px hsl(var(--neon-blue) / 0.6), 0 0 40px hsl(var(--neon-cyan) / 0.4);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    --transition-spring: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
     --transition-glow: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    --transition-frost: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glass: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-hologram: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 }
 
@@ -106,41 +121,88 @@ All colors MUST be HSL.
   position: relative;
 }
 
-/* Cold/Frosty Button styles - fully rounded */
+/* Futuristic Cyberpunk Button styles - fully rounded with holographic effects */
 .btn {
-  @apply inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium ring-offset-background transition-frost focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+  @apply inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium ring-offset-background transition-smooth focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 relative overflow-hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.btn:hover::before {
+  left: 100%;
 }
 
 .btn-primary {
-  @apply bg-primary text-primary-foreground hover:bg-primary/90 shadow-soft hover:shadow-medium transform hover:scale-105 transition-frost;
+  @apply bg-gradient-primary text-primary-foreground hover:shadow-button-hover transform hover:scale-105 transition-glow;
+  box-shadow: var(--shadow-button);
 }
 
 .btn-secondary {
-  @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-soft hover:shadow-medium transform hover:scale-105 transition-frost;
+  @apply bg-gradient-secondary text-secondary-foreground hover:shadow-button-hover transform hover:scale-105 transition-glow;
+  box-shadow: var(--shadow-button);
 }
 
 .btn-hero {
-  @apply bg-gradient-primary text-primary-foreground hover:shadow-glow transform hover:scale-105 transition-glow shadow-medium;
+  @apply bg-gradient-neon text-foreground hover:shadow-neon-glow transform hover:scale-110 transition-hologram;
+  box-shadow: var(--shadow-neon-glow);
+  animation: pulse-glow 2s infinite;
 }
 
 .btn-glass {
-  @apply bg-card/10 backdrop-blur-md border border-primary/20 text-foreground hover:bg-card/20 hover:shadow-frost transition-frost;
+  @apply backdrop-blur-md border text-foreground hover:shadow-hover-glow transform hover:scale-105 transition-glass;
+  background: var(--gradient-glass);
+  border-color: hsl(var(--glass-border));
+  box-shadow: var(--shadow-glass);
+}
+
+.btn-glass:hover {
+  background: var(--glass-hover);
+  border-color: hsl(var(--neon-blue) / 0.3);
 }
 
 .btn-success {
-  @apply bg-gradient-secondary text-secondary-foreground hover:shadow-glow transform hover:scale-105 transition-glow shadow-medium;
+  @apply bg-gradient-secondary text-secondary-foreground hover:shadow-button-hover transform hover:scale-105 transition-glow;
+  box-shadow: var(--shadow-button);
 }
 
 .btn-accent {
-  @apply bg-gradient-accent text-accent-foreground hover:shadow-neon transform hover:scale-105 transition-glow shadow-medium;
+  @apply bg-gradient-accent text-accent-foreground hover:shadow-button-hover transform hover:scale-105 transition-glow;
+  box-shadow: var(--shadow-button);
 }
 
 .btn-outline {
-  @apply border border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground transform hover:scale-105 transition-frost;
+  @apply border bg-transparent text-primary hover:text-primary-foreground transform hover:scale-105 transition-smooth;
+  border-color: hsl(var(--neon-blue));
+  box-shadow: 0 0 20px hsl(var(--neon-blue) / 0.3);
+}
+
+.btn-outline:hover {
+  background: var(--gradient-primary);
+  box-shadow: var(--shadow-button-hover);
 }
 
 .btn-ghost {
-  @apply hover:bg-accent hover:text-accent-foreground transform hover:scale-105 transition-frost;
+  @apply hover:text-accent-foreground transform hover:scale-105 transition-smooth;
+  background: transparent;
+}
+
+.btn-ghost:hover {
+  background: var(--gradient-glass);
+  box-shadow: var(--shadow-glass);
 }
 
 /* Futuristic Button Styles */
@@ -169,7 +231,105 @@ All colors MUST be HSL.
   @apply h-12 rounded-full px-8;
 }
 
-/* Cold/Frosty Card styles */
+/* Futuristic Cyberpunk Card styles */
 .card {
-  @apply rounded-2xl border bg-card text-card-foreground shadow-frost hover:shadow-strong transition-frost transform hover:-translate-y-1;
+  @apply rounded-2xl border text-card-foreground transition-smooth transform hover:-translate-y-2 relative overflow-hidden;
+  background: var(--gradient-glass);
+  border-color: hsl(var(--glass-border));
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(16px);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--gradient-hologram);
+  opacity: 0.6;
+}
+
+.card:hover {
+  border-color: hsl(var(--neon-blue) / 0.4);
+  box-shadow: var(--shadow-card-hover);
+  background: hsl(240 10% 8% / 0.8);
+}
+
+/* Glass morphism effects */
+.glass-panel {
+  @apply backdrop-blur-xl border rounded-3xl;
+  background: var(--gradient-glass);
+  border-color: hsl(var(--glass-border));
+  box-shadow: var(--shadow-glass), inset 0 1px 0 hsl(var(--glass-border));
+}
+
+.glass-panel:hover {
+  background: var(--glass-hover);
+  border-color: hsl(var(--neon-blue) / 0.2);
+  box-shadow: var(--shadow-hover-glow), inset 0 1px 0 hsl(var(--neon-blue) / 0.1);
+}
+
+/* Holographic text effect */
+.holographic-text {
+  background: var(--gradient-hologram);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: hologram-shift 3s ease-in-out infinite;
+}
+
+/* Neon glow text */
+.neon-text {
+  color: hsl(var(--neon-blue));
+  text-shadow: 0 0 10px hsl(var(--neon-blue) / 0.8), 0 0 20px hsl(var(--neon-blue) / 0.6), 0 0 30px hsl(var(--neon-blue) / 0.4);
+  animation: neon-pulse 2s ease-in-out infinite alternate;
+}
+
+/* Animations */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: var(--shadow-neon-glow);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(var(--neon-blue) / 0.8), 0 0 80px hsl(var(--neon-cyan) / 0.6), 0 0 120px hsl(var(--neon-violet) / 0.4);
+  }
+}
+
+@keyframes hologram-shift {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+  25% {
+    filter: hue-rotate(90deg);
+  }
+  50% {
+    filter: hue-rotate(180deg);
+  }
+  75% {
+    filter: hue-rotate(270deg);
+  }
+}
+
+@keyframes neon-pulse {
+  from {
+    text-shadow: 0 0 10px hsl(var(--neon-blue) / 0.8), 0 0 20px hsl(var(--neon-blue) / 0.6), 0 0 30px hsl(var(--neon-blue) / 0.4);
+  }
+  to {
+    text-shadow: 0 0 20px hsl(var(--neon-blue) / 1), 0 0 30px hsl(var(--neon-blue) / 0.8), 0 0 40px hsl(var(--neon-blue) / 0.6);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
 }
